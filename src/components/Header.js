@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import PTElement from './PTElement'
 
 const Header = ({title}) => {
   return (

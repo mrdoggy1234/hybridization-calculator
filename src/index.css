@@ -27,7 +27,7 @@ body {
   margin-bottom: 20px;
 }
 
-.btn {
+.ptelement {
   display: inline-block;
   background: #000;
   color: #fff;
@@ -41,11 +41,11 @@ body {
   font-family: inherit;
 }
 
-.btn:focus {
+.ptelement:focus {
   outline: none;
 }
 
-.btn:active {
+.ptelement:active {
   transform: scale(0.98);
 }
 
