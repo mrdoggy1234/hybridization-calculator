@@ -1,16 +1,11 @@
 import PropTypes from 'prop-types'
-import PTElement from './PTElement'
 
 const Header = ({title}) => {
   return (
-      <header>
+      <header className="header">
           <h1>{title}</h1>
       </header>
   )
-}
-
-Header.defaultProps = {
-    title: 'default title',
 }
 
 Header.propTypes = {
