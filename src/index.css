@@ -49,7 +49,7 @@ body {
   display: grid;
   grid-template-columns: repeat(18, 1fr);
   grid-template-rows: repeat(7, 1fr) 0.25fr repeat(2, 1fr);
-  gap: 0px;
+  gap: 2px;
   margin-bottom: 0px;
   overflow: clip;
   min-width: min-content;
@@ -121,11 +121,15 @@ body {
 
 @media (max-width: 1600px), (max-height: 900px) {
   .atomicnumber {
-    display: none;
+    font-size: 0.65em;
   }
 
+  .elemsymbol {
+    font-size: 2em;
+  }
+  
   .elemname {
-    display: none;
+    font-size: 0.65em;
   }
 
   .header {
@@ -142,6 +146,14 @@ body {
 }
 
 @media (max-width: 1280px), (max-height: 720px) {
+  .elemname {
+    display: none;
+  }
+
+  .atomicnumber {
+    font-size: 0.6em;
+  }
+
   .elemsymbol {
     font-size: 1.5em;
   }
@@ -157,9 +169,21 @@ body {
   .result {
     font-size: 1em;
   }
+
+  .periodictable {
+    gap: 1px;
+  }
+
+  .ptelement {
+    border: 1px solid #d3d6da;
+  }
 }
 
 @media (max-width: 960px), (max-height: 540px) {
+  .atomicnumber {
+    font-size: 0.5em;
+  }
+
   .elemsymbol {
     font-size: 1em;
   }
