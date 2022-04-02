@@ -8,20 +8,65 @@ const PeriodicTable = ({callback}) =>
     const PTElements = [];
     for (const thisElement of elements)
     {
+        // if (column > 2)
+        // {
+        //     column -= 9;
+        // }
+        let row = thisElement.at(2);
         let column = thisElement.at(3);
-        if (column > 2)
+        let atomicNumber = thisElement.at(4);
+        const fBlockOffset = 3;
+        if (atomicNumber >= 57 && atomicNumber <= 70)
         {
-            column -= 9;
+            row += 3;
+            column = atomicNumber - (57 - fBlockOffset);
         }
+        if (atomicNumber >= 89 && atomicNumber <= 102)
+        {
+            row += 3;
+            column += atomicNumber - (89 - fBlockOffset);
+        }
+
+/*         let background = "";
+        switch (thisElement.at(6))
+        {
+            case ("s"):
+            {
+                background = "lightcoral";
+                break;
+            }
+            case ("p"):
+            {
+                background = "lightyellow";
+                break;
+            }
+            case ("d"):
+            {
+                background = "lightblue";
+                break;
+            }
+            case ("f"):
+            {
+                background = "lightgreen";
+                break;
+            }
+            default:
+            {
+                background = "whitesmoke";
+                break;
+            }
+        } */
 
         PTElements.push(
             <PTElement
-                atomicNumber={thisElement.at(4)}
+                atomicNumber={atomicNumber}
                 elemSymbol={thisElement.at(0)}
                 elemName={thisElement.at(1)}
                 elemStyle={{
                     gridColumn: column,
-                    gridRow: thisElement.at(2)
+                    gridRow: row,
+                    // background: background
+                    // elementColor: background
                 }}
                 callback={callback}
                 key={thisElement.at(4)}
