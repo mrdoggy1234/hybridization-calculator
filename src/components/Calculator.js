@@ -13,23 +13,6 @@ function AddAtom(atomicNumber)
     }
     else
     {
-        /* sigmaBonds.push(atomicNumber);
-        let sigmaBondCount = sigmaBonds.length;
-        let valenceElectronCount = 0;
-        for (const thisElement of elements)
-        {
-            if (thisElement.at(4) === centralAtom)
-            {
-                valenceElectronCount = thisElement.at(5);
-                break;
-            }
-        } */
-
-        /* let valenceElectronCount = centralAtom.at(5);
-        let requiredValenceElectrons = 8 - valenceElectronCount;
-        let piBondCount = requiredValenceElectrons - sigmaBondCount;
-        let stericNumber = 4 - piBondCount; */
-        
         sigmaBonds.push(atomicNumber);
         let sigmaBondCount = sigmaBonds.length;
         let valenceElectronCount = centralAtom.at(5);
@@ -63,8 +46,7 @@ function AddAtom(atomicNumber)
                 hybridization += thisOrbital.at(1);
             }
         }
-    
-        //console.log(hybridization);
+        
         return hybridization;
     }
 };
