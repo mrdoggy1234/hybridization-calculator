@@ -13,7 +13,6 @@ export function setCentralAtom(atomicNumber)
     for (const thisElement of elements)
     {
         let thisEN = thisElement.at(7);
-        console.log(Math.abs(centralEN - thisEN));
         if ((thisEN !== 0) && (Math.abs(centralEN - thisEN) >= 2.1))
         {
             res.push(thisElement.at(4));
@@ -29,8 +28,6 @@ export function addAtom(atomicNumber)
     let sigmaBondCount = sigmaBonds.length;
     let valenceElectronCount = centralAtom.at(5);
     let stericNumber = valenceElectronCount - 4 + sigmaBondCount;
-
-    console.log(stericNumber);
 
     let orbitals = [];
     let orbitalsLeft = stericNumber;
