@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types'
-
 import elements from "./ElementList";
 import PTElement from "./PTElement";
 
@@ -46,10 +44,6 @@ const PeriodicTable = ({callback, disabledElements}) =>
             {PTElements}
         </div>
     );
-}
-
-PeriodicTable.propTypes = {
-    callback: PropTypes.func.isRequired
 }
 
 export default PeriodicTable;

@@ -63,5 +63,3 @@ export function addAtom(atomicNumber)
     
     return hybridization;
 };
-
-// export default AddAtom;

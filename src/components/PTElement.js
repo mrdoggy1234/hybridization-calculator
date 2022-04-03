@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types'
-
 const PTElement = ({ atomicNumber, elemSymbol, elemName, elemStyle, callback, disabled}) =>
 {
     return (
@@ -21,13 +19,5 @@ const PTElement = ({ atomicNumber, elemSymbol, elemName, elemStyle, callback, di
         </button>
     )
 }
-
-PTElement.propTypes =
-{
-    atomicNumber: PropTypes.number.isRequired,
-    elemSymbol: PropTypes.string.isRequired,
-    elemName: PropTypes.string.isRequired,
-    callback: PropTypes.func.isRequired
-};
 
 export default PTElement;

@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types'
-
 function onResetClick()
 {
     window.location.reload();
@@ -13,11 +11,6 @@ const Reset = ({disabled}) =>
             Reset
         </button>
     )
-}
-
-Reset.propTypes =
-{
-    disabled: PropTypes.bool.isRequired,
 }
 
 export default Reset;
