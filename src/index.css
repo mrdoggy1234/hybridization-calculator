@@ -17,7 +17,7 @@ body {
   overflow: visible;
   padding: 30px;
   border-radius: 5px;
-  height: 95vh;
+  height: 100vh;
 }
 
 .header {
@@ -42,7 +42,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-  font-size: 1.25rem;
+  font-size: 2em;
 }
 
 .periodictable {
@@ -50,7 +50,7 @@ body {
   grid-template-columns: repeat(18, 1fr);
   grid-template-rows: repeat(7, 1fr) 0.25fr repeat(2, 1fr);
   gap: 2px;
-  margin-bottom: 0px;
+  margin-bottom: 30px;
   overflow: clip;
   min-width: min-content;
   aspect-ratio: 18 / 9.25;
@@ -60,11 +60,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: white;
-  color: rgb(0, 0, 0);
-  border: 2px solid #d3d6da;
-  cursor: pointer;
   align-items: center;
+  background: white;
+  border: 2px solid #d3d6da;
   aspect-ratio: 1 / 1;
   max-height: 100%;
   width: 100%;
@@ -83,29 +81,60 @@ body {
   font-size: 1.25em;
 }
 
-.ptelement:hover {
+.ptelement:enabled {
+  cursor: pointer;
+  color: black;
+}
+
+.ptelement:hover:enabled {
   background: hsl(0, 0%, 95%);
 }
 
-.ptelement:active {
+.ptelement:active:enabled {
   background: hsl(0, 0%, 90%);
 }
 
-@media (max-width: 2560px), (max-height: 1440px) {
+.resetbtn {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  background: white;
+  border: 2px solid #d3d6da;
+  /* overflow: hidden; */
+  font-size: 2.5em;
+  padding: 0.5%;
+}
+
+.resetbtn:enabled {
+  cursor: pointer;
+  color: black;
+}
+
+.resetbtn:hover:enabled {
+  background: hsl(0, 0%, 95%);
+}
+
+.resetbtn:active:enabled {
+  background: hsl(0, 0%, 90%);
+}
+
+
+@media (max-width: 2560px), (max-height: 1800px) {
   .atomicnumber {
-    font-size: 1.25em;
+    font-size: 1em;
   }
   
   .elemsymbol {
-    font-size: 3.5em;
+    font-size: 3em;
   }
   
   .elemname {
-    font-size: 1em;
+    font-size: 0.75em;
   }
 }
 
-@media (max-width: 1920px), (max-height: 1080px) {
+@media (max-width: 1920px), (max-height: 1440px) {
   .atomicnumber {
     font-size: 0.75em;
   }
@@ -119,13 +148,13 @@ body {
   }
 }
 
-@media (max-width: 1600px), (max-height: 900px) {
+@media (max-width: 1600px), (max-height: 1080px) {
   .atomicnumber {
     font-size: 0.65em;
   }
 
   .elemsymbol {
-    font-size: 2em;
+    font-size: 1.75em;
   }
   
   .elemname {
@@ -143,19 +172,19 @@ body {
   .result {
     font-size: 1.5em;
   }
+
+  .resetbtn {
+    font-size: 1.5em;
+  }
 }
 
-@media (max-width: 1280px), (max-height: 720px) {
-  .elemname {
-    display: none;
-  }
-
+@media (max-width: 1280px), (max-height: 900px) {
   .atomicnumber {
-    font-size: 0.6em;
+    font-size: 0.75em;
   }
 
   .elemsymbol {
-    font-size: 1.5em;
+    font-size: 2em;
   }
 
   .header {
@@ -168,6 +197,18 @@ body {
 
   .result {
     font-size: 1em;
+  }
+
+  .resetbtn {
+    font-size: 1em;
+  }
+
+  .elemname {
+    display: none;
+  }
+
+  .resetbtn {
+    border: 1px solid #d3d6da;
   }
 
   .periodictable {
@@ -179,13 +220,13 @@ body {
   }
 }
 
-@media (max-width: 960px), (max-height: 540px) {
+@media (max-width: 960px), (max-height: 720px) {
   .atomicnumber {
-    font-size: 0.5em;
+    font-size: 0.6em;
   }
 
   .elemsymbol {
-    font-size: 1em;
+    font-size: 1.25em;
   }
 
   .header {
@@ -198,5 +239,35 @@ body {
 
   .result {
     font-size: 0.75em;
+  }
+
+  .resetbtn {
+    font-size: 0.75em;
+  }
+}
+
+@media (max-width: 640px), (max-height: 540px) {
+  .atomicnumber {
+    font-size: 0.35em;
+  }
+
+  .elemsymbol {
+    font-size: 0.75em;
+  }
+
+  .header {
+    font-size: 0.6em;
+  }
+
+  .instructions {
+    font-size: 0.6em;
+  }
+
+  .result {
+    font-size: 0.6em;
+  }
+
+  .resetbtn {
+    font-size: 0.6em;
   }
 }

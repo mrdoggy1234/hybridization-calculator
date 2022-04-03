@@ -1,54 +1,67 @@
 import elements from "./ElementList";
 import totalOrbitals from "./OrbitalList";
 
-let centralAtom = [];
+export let centralAtom = [];
 const sigmaBonds = [];
 
-function AddAtom(atomicNumber)
+export function setCentralAtom(atomicNumber)
 {
-    if (centralAtom.length === 0)
+    centralAtom = elements.at(atomicNumber - 1);
+
+    let res = [];
+    let centralEN = centralAtom.at(7);
+    for (const thisElement of elements)
     {
-        centralAtom = elements.at(atomicNumber - 1);
-        return "--";
+        let thisEN = thisElement.at(7);
+        console.log(Math.abs(centralEN - thisEN));
+        if ((thisEN !== 0) && (Math.abs(centralEN - thisEN) >= 2.1))
+        {
+            res.push(thisElement.at(4));
+        }
     }
-    else
+
+    return res;
+}
+
+export function addAtom(atomicNumber)
+{
+    sigmaBonds.push(elements.at(atomicNumber - 1));
+    let sigmaBondCount = sigmaBonds.length;
+    let valenceElectronCount = centralAtom.at(5);
+    let stericNumber = valenceElectronCount - 4 + sigmaBondCount;
+
+    console.log(stericNumber);
+
+    let orbitals = [];
+    let orbitalsLeft = stericNumber;
+    for (let orbitalCount = 0; orbitalCount < totalOrbitals.length; orbitalCount++)
     {
-        sigmaBonds.push(atomicNumber);
-        let sigmaBondCount = sigmaBonds.length;
-        let valenceElectronCount = centralAtom.at(5);
-        let stericNumber = valenceElectronCount + sigmaBondCount - 4;
-    
-        let orbitals = [];
-        let orbitalsLeft = stericNumber;
-        for (let orbitalCount = 0; orbitalCount < totalOrbitals.length; orbitalCount++)
+        let thisOrbital = totalOrbitals.at(orbitalCount);
+        let thisOrbitalCount = 0;
+        while (thisOrbitalCount < thisOrbital.at(1) && orbitalsLeft !== 0)
         {
-            let thisOrbital = totalOrbitals.at(orbitalCount);
-            let thisOrbitalCount = 0;
-            while (thisOrbitalCount < thisOrbital.at(1) && orbitalsLeft !== 0)
-            {
-                thisOrbitalCount++;
-                orbitalsLeft--;
-            }
-            orbitals.push([thisOrbital.at(0), thisOrbitalCount]);
-            if (orbitalsLeft === 0)
-            {
-                break;
-            }
+            thisOrbitalCount++;
+            orbitalsLeft--;
         }
-    
-        let hybridization = "";
-        
-        for (const thisOrbital of orbitals)
+        orbitals.push([thisOrbital.at(0), thisOrbitalCount]);
+        if (orbitalsLeft === 0)
         {
-            hybridization += thisOrbital.at(0);
-            if (thisOrbital.at(1) > 1)
-            {
-                hybridization += thisOrbital.at(1);
-            }
+            break;
         }
-        
-        return hybridization;
     }
+
+    let hybridization = "";
+    
+    for (const thisOrbital of orbitals)
+    {
+        hybridization += thisOrbital.at(0);
+        if (thisOrbital.at(1) > 1)
+        {
+            hybridization += thisOrbital.at(1);
+        }
+    }
+    
+    return hybridization;
 };
 
-export default AddAtom;
+// export default AddAtom;

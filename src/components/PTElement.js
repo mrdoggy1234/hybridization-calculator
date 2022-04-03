@@ -1,9 +1,14 @@
 import PropTypes from 'prop-types'
 
-const PTElement = ({ atomicNumber, elemSymbol, elemName, elemStyle, callback}) =>
+const PTElement = ({ atomicNumber, elemSymbol, elemName, elemStyle, callback, disabled}) =>
 {
     return (
-        <button className="ptelement" style={elemStyle} onClick={() => callback(atomicNumber)}>
+        <button
+            className="ptelement"
+            style={elemStyle}
+            onClick={() => callback(atomicNumber)}
+            disabled={disabled}
+        >
             <div className='atomicnumber'>
                 {atomicNumber}<br/>
             </div>

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import elements from "./ElementList";
 import PTElement from "./PTElement";
 
-const PeriodicTable = ({callback}) =>
+const PeriodicTable = ({callback, disabledElements}) =>
 {
     const PTElements = [];
     for (const thisElement of elements)
@@ -23,6 +23,8 @@ const PeriodicTable = ({callback}) =>
             column += atomicNumber - (89 - fBlockOffset);
         }
 
+        let disabled = (disabledElements.includes(atomicNumber) || thisElement.at(7) === 0);
+
         PTElements.push(
             <PTElement
                 atomicNumber={atomicNumber}
@@ -33,6 +35,7 @@ const PeriodicTable = ({callback}) =>
                     gridRow: row
                 }}
                 callback={callback}
+                disabled={disabled}
                 key={thisElement.at(4)}
             ></PTElement>
         )
