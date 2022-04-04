@@ -25,9 +25,18 @@ export function setCentralAtom(atomicNumber)
 export function addAtom(atomicNumber)
 {
     sigmaBonds.push(elements.at(atomicNumber - 1));
+};
+
+export function calcHybridization(piBondCount)
+{
+    let hybridization = "";
+
     let sigmaBondCount = sigmaBonds.length;
     let valenceElectronCount = centralAtom.at(5);
-    let stericNumber = valenceElectronCount - 4 + sigmaBondCount;
+    let bondCount = sigmaBondCount + piBondCount;
+    let lonePairCount = Math.floor((valenceElectronCount - bondCount) / 2);
+
+    let stericNumber = sigmaBondCount + lonePairCount;
 
     let orbitals = [];
     let orbitalsLeft = stericNumber;
@@ -46,8 +55,6 @@ export function addAtom(atomicNumber)
             break;
         }
     }
-
-    let hybridization = "";
     
     for (const thisOrbital of orbitals)
     {
@@ -59,4 +66,4 @@ export function addAtom(atomicNumber)
     }
     
     return hybridization;
-};
+}

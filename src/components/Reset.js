@@ -7,7 +7,7 @@ function onResetClick()
 const Reset = ({disabled}) =>
 {
     return (
-        <button className="resetbtn" onClick={onResetClick} disabled={disabled}>
+        <button className="menubtn" onClick={onResetClick} disabled={disabled}>
             Reset
         </button>
     )

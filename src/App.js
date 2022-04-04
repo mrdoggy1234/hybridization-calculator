@@ -1,16 +1,19 @@
 import Header from './components/Header';
 import Instructions from './components/Instructions';
 import Result from './components/Result';
-import Reset from './components/Reset';
+import Menu from './components/Menu';
 import PeriodicTable from './components/PeriodicTable';
-import { centralAtom, setCentralAtom, addAtom } from './components/Calculator';
+import { centralAtom, setCentralAtom, addAtom, calcHybridization } from './components/Calculator';
 
 import React, { useState } from 'react';
 
 function App()
 {
+  const [piBondCount, setPiBondCount] = useState(0);
   const [result, setResult] = useState("--");
+
   const [resetDisabled, setResetDisabled] = useState(true);
+  const [addPiBondDisabled, setAddPiBondDisabled] = useState(true);
   const [disabledElements, setDisabledElements] = useState([]);
   
   const onElementClick = (atomicNumber) =>
@@ -21,12 +24,21 @@ function App()
       setDisabledElements(ionic);
       
       setResetDisabled(false);
+      setAddPiBondDisabled(false);
     }
     else
     {
-      let hybridization = addAtom(atomicNumber);
+      addAtom(atomicNumber);
+      let hybridization = calcHybridization(piBondCount);
       setResult(hybridization);
     }
+  }
+
+  const addPiBond = () =>
+  {
+    setPiBondCount(piBondCount + 1);
+    let hybridization = calcHybridization(piBondCount);
+    setResult(hybridization);
   }
 
   return (
@@ -34,7 +46,7 @@ function App()
       <Header text="Hybridization Calculator"/>
       <Instructions text="* Select a central atom then any surrounding atoms to calculate the central atom's hybridization."/>
       <Result res={result}></Result>
-      <Reset disabled={resetDisabled}></Reset>
+      <Menu resetDisabled={resetDisabled} addPiBondCallback={addPiBond} addPiBondDisabled={addPiBondDisabled} piBondCount={piBondCount}></Menu>
       <PeriodicTable callback={onElementClick} disabledElements={disabledElements}></PeriodicTable>
     </div>
   );

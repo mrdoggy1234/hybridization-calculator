@@ -94,26 +94,49 @@ body {
   background: hsl(0, 0%, 90%);
 }
 
-.resetbtn {
+.menubtn {
   background: white;
   border: 2px solid #d3d6da;
   font-size: 2.5em;
-  padding: 0.5%;
+  padding: 2%;
 }
 
-.resetbtn:enabled {
+.menubtn:enabled {
   cursor: pointer;
   color: black;
 }
 
-.resetbtn:hover:enabled {
+.menubtn:hover:enabled {
   background: hsl(0, 0%, 95%);
 }
 
-.resetbtn:active:enabled {
+.menubtn:active:enabled {
   background: hsl(0, 0%, 90%);
 }
 
+/* .moleculecontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+}
+
+.molecule {
+  aspect-ratio: 1 / 1;
+  width: 40%;
+  border: 2px solid black;
+  border-radius: 50%;
+} */
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 25%;
+}
 
 @media (max-width: 2560px), (max-height: 1800px) {
   .atomicnumber {
@@ -168,7 +191,7 @@ body {
     font-size: 1.5em;
   }
 
-  .resetbtn {
+  .menubtn {
     font-size: 1.5em;
   }
 }
@@ -194,7 +217,7 @@ body {
     font-size: 1em;
   }
 
-  .resetbtn {
+  .menubtn {
     font-size: 1em;
   }
 
@@ -202,7 +225,7 @@ body {
     display: none;
   }
 
-  .resetbtn {
+  .menubtn {
     border: 1px solid #d3d6da;
   }
 
@@ -236,7 +259,7 @@ body {
     font-size: 0.75em;
   }
 
-  .resetbtn {
+  .menubtn {
     font-size: 0.75em;
   }
 }
@@ -262,7 +285,7 @@ body {
     font-size: 0.6em;
   }
 
-  .resetbtn {
+  .menubtn {
     font-size: 0.6em;
   }
 }
