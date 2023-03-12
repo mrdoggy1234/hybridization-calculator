@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/hybridization-calculator/static/css/main.9af15ac3.css",
+    "main.js": "/hybridization-calculator/static/js/main.3036588e.js",
+    "static/js/787.4a5fdd3e.chunk.js": "/hybridization-calculator/static/js/787.4a5fdd3e.chunk.js",
+    "index.html": "/hybridization-calculator/index.html",
+    "main.9af15ac3.css.map": "/hybridization-calculator/static/css/main.9af15ac3.css.map",
+    "main.3036588e.js.map": "/hybridization-calculator/static/js/main.3036588e.js.map",
+    "787.4a5fdd3e.chunk.js.map": "/hybridization-calculator/static/js/787.4a5fdd3e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9af15ac3.css",
+    "static/js/main.3036588e.js"
+  ]
+}
