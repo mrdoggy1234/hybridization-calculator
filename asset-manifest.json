@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/hybridization-calculator/static/css/main.ec61d849.css",
-    "main.js": "/hybridization-calculator/static/js/main.595920ab.js",
+    "main.js": "/hybridization-calculator/static/js/main.f4cd3b62.js",
     "static/js/787.abd02aec.chunk.js": "/hybridization-calculator/static/js/787.abd02aec.chunk.js",
     "index.html": "/hybridization-calculator/index.html",
     "main.ec61d849.css.map": "/hybridization-calculator/static/css/main.ec61d849.css.map",
-    "main.595920ab.js.map": "/hybridization-calculator/static/js/main.595920ab.js.map",
+    "main.f4cd3b62.js.map": "/hybridization-calculator/static/js/main.f4cd3b62.js.map",
     "787.abd02aec.chunk.js.map": "/hybridization-calculator/static/js/787.abd02aec.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ec61d849.css",
-    "static/js/main.595920ab.js"
+    "static/js/main.f4cd3b62.js"
   ]
 }
