@@ -1,275 +1,275 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
+	box-sizing: border-box;
+	margin: 0;
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 10px;
+	font-family: "Segoe UI", sans-serif;
+	font-size: 10px;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 100vw;
-  margin: auto;
-  overflow: visible;
-  padding: 30px;
-  border-radius: 5px;
-  height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 100vw;
+	margin: auto;
+	overflow: visible;
+	padding: 30px;
+	border-radius: 5px;
+	height: 100vh;
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  font-size: 2em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+	font-size: 2em;
 }
 
 .instructions {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  font-size: 2em;
-  color: gray;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+	font-size: 2em;
+	color: gray;
 }
 
 .result {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  font-size: 2em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+	font-size: 2em;
 }
 
-.periodictable {
-  display: grid;
-  grid-template-columns: repeat(18, 1fr);
-  grid-template-rows: repeat(7, 1fr) 0.25fr repeat(2, 1fr);
-  gap: 2px;
-  margin-bottom: 30px;
-  overflow: clip;
-  min-width: min-content;
-  aspect-ratio: 18 / 9.25;
+.periodic-table {
+	display: grid;
+	grid-template-columns: repeat(18, 1fr);
+	grid-template-rows: repeat(7, 1fr) 0.25fr repeat(2, 1fr);
+	gap: 2px;
+	margin-bottom: 30px;
+	overflow: clip;
+	min-width: min-content;
+	aspect-ratio: 18 / 9.25;
 }
 
 .ptelement {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: white;
-  border: 2px solid #d3d6da;
-  aspect-ratio: 1 / 1;
-  max-height: 100%;
-  width: 100%;
-  overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: white;
+	border: 2px solid #d3d6da;
+	aspect-ratio: 1 / 1;
+	max-height: 100%;
+	width: 100%;
+	overflow: hidden;
 }
 
 .atomicnumber {
-  font-size: 1.5em;
+	font-size: 1.5em;
 }
 
 .elemsymbol {
-  font-size: 4em;
+	font-size: 4em;
 }
 
 .elemname {
-  font-size: 1.25em;
+	font-size: 1.25em;
 }
 
 .ptelement:enabled {
-  cursor: pointer;
-  color: black;
+	cursor: pointer;
+	color: black;
 }
 
 .ptelement:hover:enabled {
-  background: hsl(0, 0%, 95%);
+	background: hsl(0, 0%, 95%);
 }
 
 .ptelement:active:enabled {
-  background: hsl(0, 0%, 90%);
+	background: hsl(0, 0%, 90%);
 }
 
 .menubtn {
-  background: white;
-  border: 2px solid #d3d6da;
-  font-size: 2.5em;
-  padding: 2%;
+	background: white;
+	border: 2px solid #d3d6da;
+	font-size: 2.5em;
+	padding: 2%;
 }
 
 .menubtn:enabled {
-  cursor: pointer;
-  color: black;
+	cursor: pointer;
+	color: black;
 }
 
 .menubtn:hover:enabled {
-  background: hsl(0, 0%, 95%);
+	background: hsl(0, 0%, 95%);
 }
 
 .menubtn:active:enabled {
-  background: hsl(0, 0%, 90%);
+	background: hsl(0, 0%, 90%);
 }
 
 .menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 25%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 25%;
 }
 
 @media (max-width: 2560px), (max-height: 1800px) {
-  .atomicnumber {
-    font-size: 1em;
-  }
-  
-  .elemsymbol {
-    font-size: 3em;
-  }
-  
-  .elemname {
-    font-size: 0.75em;
-  }
+	.atomicnumber {
+		font-size: 1em;
+	}
+
+	.elemsymbol {
+		font-size: 3em;
+	}
+
+	.elemname {
+		font-size: 0.75em;
+	}
 }
 
 @media (max-width: 1920px), (max-height: 1440px) {
-  .atomicnumber {
-    font-size: 0.75em;
-  }
+	.atomicnumber {
+		font-size: 0.75em;
+	}
 
-  .elemsymbol {
-    font-size: 2.5em;
-  }
-  
-  .elemname {
-    font-size: 0.75em;
-  }
+	.elemsymbol {
+		font-size: 2.5em;
+	}
+
+	.elemname {
+		font-size: 0.75em;
+	}
 }
 
 @media (max-width: 1600px), (max-height: 1080px) {
-  .atomicnumber {
-    font-size: 0.65em;
-  }
+	.atomicnumber {
+		font-size: 0.65em;
+	}
 
-  .elemsymbol {
-    font-size: 1.75em;
-  }
-  
-  .elemname {
-    font-size: 0.65em;
-  }
+	.elemsymbol {
+		font-size: 1.75em;
+	}
 
-  .header {
-    font-size: 1.5em;
-  }
+	.elemname {
+		font-size: 0.65em;
+	}
 
-  .instructions {
-    font-size: 1.5em;
-  }
+	.header {
+		font-size: 1.5em;
+	}
 
-  .result {
-    font-size: 1.5em;
-  }
+	.instructions {
+		font-size: 1.5em;
+	}
 
-  .menubtn {
-    font-size: 1.5em;
-  }
+	.result {
+		font-size: 1.5em;
+	}
+
+	.menubtn {
+		font-size: 1.5em;
+	}
 }
 
 @media (max-width: 1280px), (max-height: 900px) {
-  .atomicnumber {
-    font-size: 0.75em;
-  }
+	.atomicnumber {
+		font-size: 0.75em;
+	}
 
-  .elemsymbol {
-    font-size: 2em;
-  }
+	.elemsymbol {
+		font-size: 2em;
+	}
 
-  .header {
-    font-size: 1em;
-  }
+	.header {
+		font-size: 1em;
+	}
 
-  .instructions {
-    font-size: 1em;
-  }
+	.instructions {
+		font-size: 1em;
+	}
 
-  .result {
-    font-size: 1em;
-  }
+	.result {
+		font-size: 1em;
+	}
 
-  .menubtn {
-    font-size: 1em;
-  }
+	.menubtn {
+		font-size: 1em;
+	}
 
-  .elemname {
-    display: none;
-  }
+	.elemname {
+		display: none;
+	}
 
-  .menubtn {
-    border: 1px solid #d3d6da;
-  }
+	.menubtn {
+		border: 1px solid #d3d6da;
+	}
 
-  .periodictable {
-    gap: 1px;
-  }
+	.periodic-table {
+		gap: 1px;
+	}
 
-  .ptelement {
-    border: 1px solid #d3d6da;
-  }
+	.ptelement {
+		border: 1px solid #d3d6da;
+	}
 }
 
 @media (max-width: 960px), (max-height: 720px) {
-  .atomicnumber {
-    font-size: 0.6em;
-  }
+	.atomicnumber {
+		font-size: 0.6em;
+	}
 
-  .elemsymbol {
-    font-size: 1.25em;
-  }
+	.elemsymbol {
+		font-size: 1.25em;
+	}
 
-  .header {
-    font-size: 0.75em;
-  }
+	.header {
+		font-size: 0.75em;
+	}
 
-  .instructions {
-    font-size: 0.75em;
-  }
+	.instructions {
+		font-size: 0.75em;
+	}
 
-  .result {
-    font-size: 0.75em;
-  }
+	.result {
+		font-size: 0.75em;
+	}
 
-  .menubtn {
-    font-size: 0.75em;
-  }
+	.menubtn {
+		font-size: 0.75em;
+	}
 }
 
 @media (max-width: 640px), (max-height: 540px) {
-  .atomicnumber {
-    font-size: 0.35em;
-  }
+	.atomicnumber {
+		font-size: 0.35em;
+	}
 
-  .elemsymbol {
-    font-size: 0.75em;
-  }
+	.elemsymbol {
+		font-size: 0.75em;
+	}
 
-  .header {
-    font-size: 0.6em;
-  }
+	.header {
+		font-size: 0.6em;
+	}
 
-  .instructions {
-    font-size: 0.6em;
-  }
+	.instructions {
+		font-size: 0.6em;
+	}
 
-  .result {
-    font-size: 0.6em;
-  }
+	.result {
+		font-size: 0.6em;
+	}
 
-  .menubtn {
-    font-size: 0.6em;
-  }
+	.menubtn {
+		font-size: 0.6em;
+	}
 }
